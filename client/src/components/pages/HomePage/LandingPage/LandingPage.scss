@@ -1,0 +1,137 @@
+.landing {
+  &__globalContainer {
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__img {
+    width: 500px;
+  }
+
+  &__containerTitle {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+
+  &__textTopTitle {
+    color: #fc9243;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    color: #868686;
+    margin-top: 10px;
+  }
+
+  &__containerBtn {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+
+  &__btnDownload {
+    height: 40px;
+    width: 160px;
+    background-color: #fc9243;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+
+  &__btnContactMe {
+    height: 40px;
+    width: 160px;
+    background-color: transparent;
+    border: 2px solid #fc9243;
+    border-radius: 8px;
+    color: #000000;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+}
+
+// 1057
+
+@media (max-width: 1057px) {
+  .landing {
+    &__img {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .landing {
+    &__img {
+      width: 300px;
+    }
+
+    &__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__globalContainer {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .landing {
+    &__containerTitle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &__desc {
+      text-align: center;
+      width: 90%;
+    }
+
+    &__btnDownload {
+      margin-right: 10px;
+    }
+
+    &__img {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .landing {
+    &__btnDownload {
+      width: 120px;
+    }
+
+    &__btnContactMe {
+      width: 120px;
+    }
+  }
+}
