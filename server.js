@@ -20,6 +20,9 @@ app.use(passport.initialize());
 // Passport config
 require('./config/passport')(passport);
 
+// multer stock images
+app.use('/public', express.static('public'));
+
 // DB Config
 const db = require('./config/keys').mongoConnect;
 
