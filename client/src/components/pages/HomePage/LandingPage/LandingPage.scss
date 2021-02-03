@@ -1,6 +1,6 @@
 .landing {
   &__globalContainer {
-    height: 100vh;
+    height: calc(100vh - 70px);
     background-color: #f9f9f9;
   }
 
@@ -72,7 +72,6 @@
   }
 }
 
-// 1057
 
 @media (max-width: 1057px) {
   .landing {
