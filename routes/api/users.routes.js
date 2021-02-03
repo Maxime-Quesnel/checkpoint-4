@@ -81,4 +81,20 @@ router.post('/login', (req, res) => {
   });
 });
 
+router.get('/', (req, res) => {
+  User.findOne({}, (err, user) => {
+    if (err) {
+      res.status(300).send({ message: 'error get user' });
+    } else {
+      const result = {
+        firstname: user.firstname,
+        lastname: user.lastname,
+        phone: user.phone,
+        email: user.email
+      };
+      res.status(200).send(result);
+    }
+  });
+});
+
 module.exports = router;
