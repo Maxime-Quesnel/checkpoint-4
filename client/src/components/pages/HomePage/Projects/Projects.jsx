@@ -31,8 +31,8 @@ class Projects extends Component {
   render() {
     return (
       <div className='project__globalContainer'>
-        <p className='project__topTitle'>project</p>
-        <h4 className='project__title'>My project</h4>
+        <p className='project__topTitle'>projects</p>
+        <h4 className='project__title'>My projects</h4>
         <div className='project__containerCard'>
           {this.state.infos.map(el => {
             return (
