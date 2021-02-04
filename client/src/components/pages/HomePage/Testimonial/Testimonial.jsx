@@ -34,7 +34,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className='testimonial__globalContainer'>
+    <div className='testimonial__globalContainer' id='testimonial'>
       <h1 className='testimonial__title'>Recommandation</h1>
       <div className='carousel'>
         <Slider {...carouselSettings}>
