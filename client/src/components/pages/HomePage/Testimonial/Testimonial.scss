@@ -1,0 +1,66 @@
+@media (max-width: 800px) {
+  .carousel {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .slick-dots li button:before {
+    display: none;
+  }
+  .slick-dots li.slick-active button:before {
+    display: none;
+  }
+}
+
+.testimonial {
+  &__globalContainer {
+    height: 100%;
+    padding: 5rem 0;
+    width: 100%;
+    margin-top: 10rem;
+    background-color: #edf0f6;
+  }
+
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 45px;
+  }
+
+  &__centerCard {
+    display: flex !important;
+    justify-content: center;
+    outline: none;
+  }
+}
+
+.slick-dots li {
+  margin: 0 16px;
+}
+.slick-dots li button:before {
+  content: ' ';
+  background: #d8d8d8;
+  opacity: 1;
+  display: block;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active button:before {
+  content: ' ';
+  display: block;
+  background: #282841;
+  opacity: 1;
+  width: 40px;
+  left: -15px;
+  height: 13px;
+  border-radius: 30px;
+  margin-right: 155px;
+}
+
+.slick-list,
+.slick-track {
+  touch-action: pan-y;
+}
