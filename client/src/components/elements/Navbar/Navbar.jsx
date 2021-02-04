@@ -10,7 +10,7 @@ function Navbar() {
       <div className='navbar__globalContainer'>
         <img className='navbar__logo' src={Logo} alt='logo-maax-code' />
         <div className='navbar__containerOptions'>
-          <a className='navbar__option' href='home'>
+          <a className='navbar__option' href='/'>
             Home
           </a>
           <a className='navbar__option' href='/about'>
@@ -54,7 +54,7 @@ function Navbar() {
           }}
         >
           <div className='navMobile__containerOptions'>
-            <a className='navMobile__option' href='home'>
+            <a className='navMobile__option' href='/'>
               Home
             </a>
             <a className='navMobile__option' href='/about'>
