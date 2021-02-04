@@ -27,7 +27,6 @@ function Dashboard() {
         };
         axios
           .post('http://localhost:8000/api/upload/new', newsData)
-
           .then(resTwo => {
             alert(`Article créé`);
             window.location.reload();

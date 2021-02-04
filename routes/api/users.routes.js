@@ -97,4 +97,18 @@ router.get('/', (req, res) => {
   });
 });
 
+router.post('/updateUser', (req, res) => {
+  const { firstname, lastname, phone } = req.body;
+  User.updateOne(
+    { firstname: firstname, lastname: lastname, phone: phone },
+    (err, user) => {
+      if (user) {
+        res.status(200).send(user);
+      } else {
+        res.status(400).send('no possible update user');
+      }
+    }
+  );
+});
+
 module.exports = router;

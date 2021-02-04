@@ -5,8 +5,8 @@ import { loginUser } from '../../../../actions/auth.action';
 import './Login.scss';
 
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: '',
       password: ''
@@ -65,7 +65,7 @@ class Login extends Component {
           </div>
           <form
             noValidate
-            onClick={this.onSubmit}
+            onSubmit={this.onSubmit}
             style={{ marginTop: '60px' }}
           >
             <input
@@ -90,12 +90,12 @@ class Login extends Component {
               autoComplete='off'
               required
             />
+            <div className='login__containerBtn'>
+              <button type='submit' className='login__btn'>
+                submit
+              </button>
+            </div>
           </form>
-          <div className='login__containerBtn'>
-            <button type='submit' className='login__btn'>
-              submit
-            </button>
-          </div>
         </div>
       </div>
     );
