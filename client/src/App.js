@@ -17,6 +17,7 @@ import PrivateRoute from './private/PrivateRoute';
 import HomePage from './components/pages/HomePage/HomePage';
 import Login from './components/pages/auth/Login/Login';
 import Dashboard from './components/pages/Dashboard/Dashboard';
+import DashboardUpdate from './components/pages/DashboardUpdate/DashboardUpdate';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -48,6 +49,11 @@ const App = () => {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/login' component={Login} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
+          <PrivateRoute
+            exact
+            path='/dashboard/update'
+            component={DashboardUpdate}
+          />
         </Switch>
       </Router>
     </Provider>
