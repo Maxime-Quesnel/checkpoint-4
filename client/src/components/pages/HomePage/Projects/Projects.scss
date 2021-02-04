@@ -1,0 +1,35 @@
+.project {
+  &__globalContainer {
+    height: 100%;
+    padding: 40px;
+  }
+
+  &__topTitle {
+    text-align: center;
+    color: #fc9243;
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #222d63;
+    text-align: center;
+  }
+
+  &__containerCard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .client {
+    &__globalContainer {
+      padding: 0px;
+    }
+  }
+}
