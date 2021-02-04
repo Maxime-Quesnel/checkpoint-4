@@ -10,9 +10,13 @@ import store from './store';
 // Components
 import Navbar from './components/elements/Navbar/Navbar';
 
+// Private route
+import PrivateRoute from './private/PrivateRoute';
+
 // Pages
 import HomePage from './components/pages/HomePage/HomePage';
 import Login from './components/pages/auth/Login/Login';
+import Dashboard from './components/pages/Dashboard/Dashboard';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -31,7 +35,7 @@ if (localStorage.jwtToken) {
     store.dispatch(logoutUser());
 
     // Redirect to login
-    window.location.href = './login';
+    window.location.href = '/login';
   }
 }
 
@@ -43,6 +47,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/login' component={Login} />
+          <PrivateRoute exact path='/dashboard' component={Dashboard} />
         </Switch>
       </Router>
     </Provider>

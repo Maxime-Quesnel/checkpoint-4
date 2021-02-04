@@ -9,10 +9,9 @@ function Client() {
 
   function getImages() {
     axios
-      .get('http://localhost:8000/api/upload/')
+      .get('http://localhost:8000/api/upload/all')
       .then(res => {
         setDataImages(res.data);
-        console.log(res.data);
       })
       .catch(err => {
         console.error(err);
@@ -25,13 +24,26 @@ function Client() {
 
   return (
     <div className='client__globalContainer'>
+      {console.log(dataImages)}
       <h4 className='client__title'>My client</h4>
       <div className='client__imgContainer'>
-        <img
-          className='client__img'
-          //src={`http://localhost:8000/public/images/${data.name}`}
-          alt='client-logo'
-        />
+        {dataImages.length === 0 ? (
+          <p
+            style={{ fontSize: '30px', textAlign: 'center', color: '#fc9243' }}
+          >
+            No customer for the moment
+          </p>
+        ) : (
+          dataImages.map(el => {
+            return (
+              <img
+                className='client__img'
+                src={`http://localhost:8000/public/images/${el.name}`}
+                alt={el.alt}
+              />
+            );
+          })
+        )}
       </div>
     </div>
   );

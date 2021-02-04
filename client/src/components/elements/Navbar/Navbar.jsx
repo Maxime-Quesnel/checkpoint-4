@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 import './Navbar.scss';
 import Logo from '../../../assets/Logo.png';
 
-function Navbar() {
+function Navbar({ auth }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
@@ -22,6 +23,11 @@ function Navbar() {
           <a className='navbar__option' href='/testimonial'>
             Testimonial
           </a>
+          {auth.isAuthenticated ? (
+            <a className='navbar__option' href='/dashboard'>
+              Dashboard
+            </a>
+          ) : null}
         </div>
         <button type='button' className='navbar__btnContactMe'>
           Contact me
@@ -75,4 +81,9 @@ function Navbar() {
     </>
   );
 }
-export default Navbar;
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(Navbar);
