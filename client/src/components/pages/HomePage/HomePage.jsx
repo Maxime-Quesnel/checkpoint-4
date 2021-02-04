@@ -3,6 +3,7 @@ import About from './About/About';
 import Client from './Client/Client';
 import Projects from './Projects/Projects';
 import Testimonial from './Testimonial/Testimonial';
+import Form from './Form/Form';
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <Client />
       <Projects />
       <Testimonial />
+      <Form />
     </>
   );
 }

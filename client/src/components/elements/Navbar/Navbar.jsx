@@ -20,7 +20,10 @@ function Navbar({ auth }) {
           <a className='navbar__option' href='#client'>
             Client
           </a>
-          <a className='navbar__option' href='/testimonial'>
+          <a className='navbar__option' href='#project'>
+            Projects
+          </a>
+          <a className='navbar__option' href='#testimonial'>
             Testimonial
           </a>
           {auth.isAuthenticated ? (
@@ -29,8 +32,12 @@ function Navbar({ auth }) {
             </a>
           ) : null}
         </div>
-        <button type='button' className='navbar__btnContactMe'>
-          Contact me
+        <button
+          onClick={() => (window.location.href = '/login')}
+          type='button'
+          className='navbar__btnContactMe'
+        >
+          Connexion admin
         </button>
       </div>
       <div className='navMobile__globalContainer'>
@@ -69,7 +76,10 @@ function Navbar({ auth }) {
             <a className='navMobile__option' href='#client'>
               Client
             </a>
-            <a className='navMobile__option' href='/testimonial'>
+            <a className='navMobile__option' href='#project'>
+              Projects
+            </a>
+            <a className='navMobile__option' href='#testimonial'>
               Testimonial
             </a>
             {auth.isAuthenticated ? (
@@ -77,8 +87,12 @@ function Navbar({ auth }) {
                 Dashboard
               </a>
             ) : null}
-            <button type='button' className='navbar__btnContactMe'>
-              Contact me
+            <button
+              onClick={() => (window.location.href = '/login')}
+              type='button'
+              className='navbar__btnContactMe'
+            >
+              Connexion admin
             </button>
           </div>
         </nav>

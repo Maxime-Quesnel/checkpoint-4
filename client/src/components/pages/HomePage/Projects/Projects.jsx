@@ -30,7 +30,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <div className='project__globalContainer'>
+      <div className='project__globalContainer' id='project'>
         <p className='project__topTitle'>projects</p>
         <h4 className='project__title'>My projects</h4>
         <div className='project__containerCard'>
