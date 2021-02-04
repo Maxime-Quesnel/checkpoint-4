@@ -3,6 +3,32 @@ const multer = require('multer');
 
 const Image = require('../../models/Image');
 
+router.post('/new', (req, res) => {
+  const { name, alt } = req.body;
+  Image.findOne({ name, alt }, (err, result) => {
+    if (err) {
+      res.status(500).send({ error: "erreur ajout d'image" });
+    } else {
+      const newImage = new Image({
+        name,
+        alt
+      });
+      newImage.save();
+      res.status(200).send('image ajouté avec succes');
+    }
+  });
+});
+
+router.get('/all', (req, res) => {
+  Image.find({}, (err, result) => {
+    if (err) {
+      res.status(300).send(err);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
 router.post('/', (req, res) => {
   const storage = multer.diskStorage({
     // destination stock image
@@ -26,31 +52,5 @@ router.post('/', (req, res) => {
     }
   });
 });
-
-router.post('/add', (req, res) => {
-  const { name, alt } = req.body;
-  Image.findOne({ name, alt }, (err, result) => {
-    if (err) {
-      res.status(500).send({ error: "erreur ajout d'image" });
-    } else {
-      const newImage = new Image({
-        name,
-        alt
-      });
-      newImage.save();
-      res.status(200).send('image ajouté avec succes');
-    }
-  });
-});
-
-// router.get('/all', (req, res) => {
-//   connection.query(sql, (err, result) => {
-//     if (err) {
-//       res.status(500).json({ errorMessage: 'Error 500' });
-//     } else {
-//       res.status(200).json(result);
-//     }
-//   });
-// });
 
 module.exports = router;
