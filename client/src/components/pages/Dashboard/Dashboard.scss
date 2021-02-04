@@ -1,0 +1,115 @@
+.dashboard {
+  &__globalContainer {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__containerForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__input {
+    display: block;
+    margin: 30px auto;
+    background: #353c52;
+    border: 0;
+    border-radius: 5px;
+    padding: 14px 10px;
+    width: 320px;
+    outline: none;
+    color: #d6d6d6;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+
+  &__btn {
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #fc9243;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 20px;
+    transform: rotate(180deg);
+  }
+
+  &__containerBtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .dashboard {
+    &__globalContainer {
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+  }
+}
+
+.blue-btn:hover,
+.blue-btn:active,
+.blue-btn:focus,
+.blue-btn {
+  background: transparent;
+  border: solid 1px #fc9243;
+  border-radius: 3px;
+  color: #fc9243;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none !important;
+  padding: 10px 20px;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  margin-top: 0;
+}
+
+.fileUpload input.uploadlogo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 100%;
+  height: 42px;
+}
+
+/*Chrome fix*/
+input::-webkit-file-upload-button {
+  cursor: pointer !important;
+  height: 42px;
+  width: 100%;
+}
