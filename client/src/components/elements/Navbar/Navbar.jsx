@@ -14,11 +14,11 @@ function Navbar({ auth }) {
           <a className='navbar__option' href='/'>
             Home
           </a>
-          <a className='navbar__option' href='/about'>
+          <a className='navbar__option' href='#about'>
             About
           </a>
-          <a className='navbar__option' href='/skills'>
-            Skills
+          <a className='navbar__option' href='#client'>
+            Client
           </a>
           <a className='navbar__option' href='/testimonial'>
             Testimonial
@@ -63,15 +63,20 @@ function Navbar({ auth }) {
             <a className='navMobile__option' href='/'>
               Home
             </a>
-            <a className='navMobile__option' href='/about'>
+            <a className='navMobile__option' href='#about'>
               About
             </a>
-            <a className='navMobile__option' href='/skills'>
-              Skills
+            <a className='navMobile__option' href='#client'>
+              Client
             </a>
             <a className='navMobile__option' href='/testimonial'>
               Testimonial
             </a>
+            {auth.isAuthenticated ? (
+              <a className='navbar__option' href='/dashboard'>
+                Dashboard
+              </a>
+            ) : null}
             <button type='button' className='navbar__btnContactMe'>
               Contact me
             </button>

@@ -17,7 +17,7 @@ function About() {
   }, []);
 
   return (
-    <div className='about__globalContainer'>
+    <div className='about__globalContainer' id='about'>
       <img className='about__img' src={MenImg} alt='men-about' />
       <div className='about__containerInfos'>
         <p className='about__topTitle'>My intro</p>

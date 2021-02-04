@@ -23,8 +23,7 @@ function Client() {
   }, []);
 
   return (
-    <div className='client__globalContainer'>
-      {console.log(dataImages)}
+    <div className='client__globalContainer' id='client'>
       <h4 className='client__title'>My client</h4>
       <div className='client__imgContainer'>
         {dataImages.length === 0 ? (
